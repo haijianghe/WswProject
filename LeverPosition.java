@@ -1,8 +1,8 @@
-//Ã¶¾Ù£º¿ØÖÆ¸ËµÄÎ»ÖÃ
+//æšä¸¾ï¼šæ§åˆ¶æ†çš„ä½ç½® 2018.5.14,from Feature
 public final class LeverPosition
 { 
-	static final int OFF = 1; //¹Ø±Õ¿ØÖÆ¸Ë
-	static final int INT = 2; //¼äĞª
-	static final int LOW = 3; //µÍËÙ
-	static final int HIGH =4; //¸ßËÙ
+	static final int OFF = 1; //å…³é—­æ§åˆ¶æ†
+	static final int INT = 2; //é—´æ­‡
+	static final int LOW = 3; //ä½é€Ÿ
+	static final int HIGH =4; //é«˜é€Ÿ
 }
