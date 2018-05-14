@@ -1,20 +1,27 @@
-/*¿Ì¶ÈÅÌÀà*/
+/*åˆ»åº¦ç›˜ç±»*/
 public class DialSense {
-	private int nPointer; //¿Ì¶ÈÅÌÖ¸Õë
-	private int nStatus;//µçÔ´×´Ì¬
-	//¹¹Ôìº¯Êı
+	private int nPointer; //åˆ»åº¦ç›˜æŒ‡é’ˆ
+	private int nStatus;//ç”µæºçŠ¶æ€
+	//æ„é€ å‡½æ•°
 	public DialSense()
 	{
-		nPointer = 1; //¿Ì¶ÈÅÌÖ¸ÕëÆğÊ¼Î»ÖÃ£º 1
-		nStatus = PowerStatus.OFF;  //µçÔ´ÊÇ¹Ø±Õ×´Ì¬
+		nPointer = 1; //åˆ»åº¦ç›˜æŒ‡é’ˆèµ·å§‹ä½ç½®ï¼š 1,
+		nStatus = PowerStatus.OFF;  //ç”µæºæ˜¯å…³é—­çŠ¶æ€
 	}
-	//¹¹Ôì´ø²ÎÊıµÄ²Ù×İ¸ËÀà
+	//æ„é€ å¸¦å‚æ•°çš„æ“çºµæ†ç±»
 	public DialSense(int nPower,int nPos)
 	{
-		nPointer = nPos; //¿Ì¶ÈÅÌÖ¸Õë
-		nStatus = nPower;  //µçÔ´×´Ì¬
+		nPointer = nPos; //åˆ»åº¦ç›˜æŒ‡é’ˆ
+		nStatus = nPower;  //ç”µæºçŠ¶æ€
 	}
-	//Ôö¼Ó¿Ì¶ÈÅÌ,Ö»ÓĞ´øµç²ÅÆğ×÷ÓÃ¡£
+	
+	//Featureåˆ†æ”¯ï¼Œæ–°æ·»åŠ ã€‚æ„é€ å¸¦å‚æ•°çš„æ“çºµæ†ç±»
+	public DialSense(int nPower)
+	{
+		nPointer = 1; //åˆ»åº¦ç›˜æŒ‡é’ˆ
+		nStatus = nPower;  //ç”µæºçŠ¶æ€
+	}
+	//å¢åŠ åˆ»åº¦ç›˜,åªæœ‰å¸¦ç”µæ‰èµ·ä½œç”¨ã€‚
 	public void Increment()
 	{
 		if( PowerStatus.OFF==nStatus )
@@ -23,7 +30,7 @@ public class DialSense {
 		else if( 2==nPointer )	nPointer = 3;
 		else nPointer = 3;
 	}
-	//µ÷Ğ¡¿Ì¶ÈÅÌ,Ö»ÓĞ´øµç²ÅÆğ×÷ÓÃ¡£
+	//è°ƒå°åˆ»åº¦ç›˜,åªæœ‰å¸¦ç”µæ‰èµ·ä½œç”¨ã€‚
 	public void Decrement()
 	{
 		if( PowerStatus.OFF==nStatus )
@@ -32,17 +39,17 @@ public class DialSense {
 		else if( 2==nPointer )	nPointer = 1;
 		else nPointer = 1;
 	}
-	//»ñµÃ¿Ì¶ÈÅÌÖ¸Õë
+	//è·å¾—åˆ»åº¦ç›˜æŒ‡é’ˆ
 	public int GetPointer()
 	{
 		return nPointer;
 	}
-	//Éè¶¨¿Ì¶ÈÅÌÖ¸Õë¡£
+	//è®¾å®šåˆ»åº¦ç›˜æŒ‡é’ˆã€‚
 	public void SetPointer(int nPos)
 	{
 		nPointer = nPos;
 	}
-	//¸Ä±äµçÔ´×´Ì¬
+	//æ”¹å˜ç”µæºçŠ¶æ€
 	public void SetPowerStatus( int nps )
 	{
 		nStatus = nps;
