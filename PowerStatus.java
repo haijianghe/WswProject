@@ -1,5 +1,6 @@
-//Ã¶¾Ù£ºµçÔ´×´Ì¬
+//æšä¸¾ï¼šç”µæºçŠ¶æ€
 public class PowerStatus {
-	static final int OFF = 1; //¹Ø±Õ
-	static final int ON = 2;  //¿ªÆô
+	static final int OFF = 1; //å…³é—­
+	static final int ON = 2;  //å¼€å¯
+	static final int Unknown = 3; //æœªçŸ¥
 }
